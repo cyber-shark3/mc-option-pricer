@@ -1,0 +1,16 @@
+{
+  "run_id": "2026-09-18-market-validation-001",
+  "seed": 20260918,
+  "paths_per_asset": 10000,
+  "steps": 252,
+  "risk_free_rate": 0.05,
+  "maturity_years": 1.0,
+  "method": "GBM Monte Carlo with antithetic variates",
+  "assets": [
+    {"asset":"Brent Crude Oil","symbol":"BZ=F","spot":104.61,"currency":"USD","volatility_input":0.35,"spot_source":"Reuters, 2026-09-11"},
+    {"asset":"Gold Spot","symbol":"XAUUSD","spot":4363.01,"currency":"USD/oz","volatility_input":0.20,"spot_source":"Reuters, 2026-09-11"},
+    {"asset":"FirstRand Namibia","symbol":"FNB (NSX)","spot":56.09,"currency":"NAD/share","volatility_input":0.18,"spot_source":"Investing.com, 2026-09-16"}
+  ],
+  "validation": "All European MC prices were within 3 Monte Carlo standard errors of Black-Scholes.",
+  "note": "Volatility inputs are explicit test assumptions, not implied-volatility estimates. This is model validation data, not investment advice."
+}
